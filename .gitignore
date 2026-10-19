@@ -1,3 +1,10 @@
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+.claude.json
+.claude.local.json
+*.claude
+
 # Local agent design artifacts
 /docs/superpowers/
 /.superpowers/
