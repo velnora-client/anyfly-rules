@@ -1,129 +1,79 @@
-## **下载地址**：
+# Nautilus Rules
 
-| 文件名              | Github release                                                                                                            | JSdelivr                                                                                                                           | JSdelivr-CF                                                                                                                              |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| country.mmdb        | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/country.mmdb)                                 | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/country.mmdb)                                                   | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/country.mmdb)                                                  |
-| geoip.dat           | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geoip.dat)                                    | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip.dat)                                                      | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip.dat)                                                       |
-| geoip.db            | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geoip.db)                                     | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip.db)                                                       | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip.db)                                                        |
-| geoip.metadb        | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geoip.metadb)                                 | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip.metadb)                                                   | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip.metadb)                                                    |
-| country-lite.mmdb   | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/country-lite.mmdb)                            | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/country-lite.mmdb)                                              | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/country-lite.mmdb)                                               |
-| geoip-lite.dat      | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geoip-lite.dat)                               | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip-lite.dat)                                                 | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip-lite.dat)                                                  |
-| geoip-lite.db       | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geoip-lite.db)                                | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip-lite.db)                                                  | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geoip-lite.db)                                                   |
-| geosite.dat         | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geosite.dat)                                  | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite.dat)                                                    | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite.dat)                                                     |
-| geosite.db          | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geosite.db)                                   | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite.db)                                                     | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite.db)                                                      |
-| geosite-lite.dat    | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geosite-lite.dat)                             | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite-lite.dat)                                               | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite-lite.dat)                                                 |
-| geosite-lite.db     | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/geosite-lite.db)                              | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite-lite.db)                                                | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite-lite.db)                                                 |
-| GeoLite2-ASN.mmdb   | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/GeoLite2-ASN.mmdb)                            | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/GeoLite2-ASN.mmdb)                                              | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/GeoLite2-ASN.mmdb)                                                 |                                               | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/geosite-lite.db)                                                 |
-| BundleMRS.7z        | [下载](https://github.com/slow-craft/nautilus-rules/releases/download/latest/BundleMRS.7z)                                 | [下载](https://cdn.jsdelivr.net/gh/slow-craft/nautilus-rules@release/BundleMRS.7z)                                                   | [下载](https://testingcf.jsdelivr.net/gh/slow-craft/nautilus-rules@release/BundleMRS.7z)                                                 |
+Nautilus Rules 汇集域名与 IP 数据，生成代理内核使用的地理数据库和规则集。构建流程整理直连、代理、广告与服务类别，输出完整和精简数据，以及 Mihomo MRS 和 sing-box 规则文件。
 
-### **rule-set**
+## 获取数据
 
-mihomo：[meta branch](https://github.com/slow-craft/nautilus-rules/tree/meta)
+数据库和打包文件由 [.github/workflows/release.yml](.github/workflows/release.yml) 生成。工作流成功发布后，可在 [Releases](https://github.com/velnora-client/nautilus-rules/releases) 获取 `latest` 数据版本；使用前确认所需版本和文件已经存在。
 
-sing-box: [sing branch](https://github.com/slow-craft/nautilus-rules/tree/sing)
+| 格式 | 构建输出 |
+| --- | --- |
+| 国家 IP 数据 | `country.mmdb`、`country-lite.mmdb` |
+| V2Ray 地理数据 | `geoip.dat`、`geoip-lite.dat`、`geosite.dat`、`geosite-lite.dat` |
+| sing-box 数据库 | `geoip.db`、`geoip-lite.db`、`geosite.db`、`geosite-lite.db` |
+| Meta IP 数据库 | `geoip.metadb`、`geoip-lite.metadb` |
+| ASN 数据 | `GeoLite2-ASN.mmdb` |
+| MRS 集合 | `BundleMRS.7z` |
 
-## **country.mmdb,geoip.dat,geoip.db 内容**
+构建会为发布文件生成 `.sha256sum`。下载时保留对应校验文件，在同一目录验证，例如：
 
-同 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
+```sh
+sha256sum -c geosite.dat.sha256sum
+```
 
-- 新增类别（方便有特殊需求的用户使用）：
-  - `geoip:cloudflare`
-  - `geoip:cloudfront`
-  - `geoip:facebook`
-  - `geoip:fastly`
-  - `geoip:google`
-  - `geoip:netflix`
-  - `geoip:telegram`
-  - `geoip:twitter`
+生成的分支布局为：
 
-## **country-lite.mmdb,geoip-lite.dat,geoip-lite.db 内容**
+- `release`：数据库、压缩包和校验文件。
+- `meta`：Mihomo MRS 规则，包含 `geo/geosite`、`geo/geoip`、精简规则和 ASN。
+- `sing`：sing-box 规则集，采用对应目录分类。
 
-国家仅包含 CN/JP,精简体积,替换一些类别
+这些是工作流的输出目标；若当前尚无对应发布或分支，应先完成数据构建。`latest` 是滚动更新版本，内容会随上游数据变化。
 
-- 新增类别（方便有特殊需求的用户使用）：
-  - `geoip:cloudflare`
-  - `geoip:cloudfront`
-  - `geoip:facebook`
-  - `geoip:bilibili`
-  - `geoip:google`
-  - `geoip:netflix`
-  - `geoip:telegram`
-  - `geoip:twitter`
-  - `geoip:apple`
+## 在 Mihomo 中使用
 
-## **geosite.dat,geosite.db 内容**
-
-用法同 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
-
-- `geosite:category-ads-all` 仅使用域名作为广告拦截用途作用有限，因此不作额外域名添加
-- `geosite:cn` 源替换为 [ios_rule_script/ChinaMax_Domain](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/ChinaMax)
-- `geosite:onedrive` 合并 [ios_rule_script/OneDrive](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/OneDrive)
-- `geosite:steam@cn` 合并 [ios_rule_script/SteamCN](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/SteamCN) 的内数据
-- 新增类别 - `geosite:biliintl` 来源 [biliintl](https://raw.githubusercontent.com/xishang0128/rules/main/biliintl.list) - `geosite:tracker` 来源 [TrackersList](https://trackerslist.com/#/zh)以及[blackmatrix7
-  /
-  ios_rule_script](https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash/PrivateTracker)
-
-## **geosite-lite.dat,geosite-lite.db 内容**
-
-仅包含常用集合，cn 为精简集合，可能不全
-集合内容均来自 https://github.com/blackmatrix7/ios_rule_script/tree/master/rule/Clash
-
-集合包含 `abema / apple / applemusic / bilibili / biliintl / bahamut / cn / ehentai / google / github / microsoft / netflix / openai / onedrive / pixiv / proxy / spotify / telegram / twitter / tiktok / youtube / proxymedia`
-
-## **示例**
+将构建输出的中国域名规则 `geo/geosite/cn.mrs` 放到本地 `./provider/rule-set/geosite-cn.mrs` 后，可使用以下配置将匹配流量直连：
 
 ```yaml
 rule-providers:
   cn:
+    type: file
     behavior: domain
-    interval: 86400
-    path: ./provider/rule-set/geosite-cn.mrs
-    type: http
     format: mrs
-    url: "https://raw.githubusercontent.com/slow-craft/nautilus-rules/meta/geo/geosite/cn.mrs"
-    path-in-bundle: "geo/geosite/cn.mrs"
-
-dns:
-  nameserver-policy:
-    "geosite:cn,private,apple":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-    "geosite:category-ads-all": rcode://success
-
+    path: ./provider/rule-set/geosite-cn.mrs
 rules:
   - RULE-SET,cn,DIRECT
-  - GEOSITE,category-ads-all,REJECT
-  - GEOSITE,private,DIRECT
-  - GEOSITE,youtube,PROXY
-  - GEOSITE,google,PROXY
-  - GEOSITE,twitter,PROXY
-  - GEOSITE,pixiv,PROXY
-  - GEOSITE,category-scholar-!cn,PROXY
-  - GEOSITE,biliintl,PROXY
-  - GEOSITE,onedrive,DIRECT
-  - GEOSITE,microsoft@cn,DIRECT
-  - GEOSITE,apple-cn,DIRECT
-  - GEOSITE,steam@cn,DIRECT
-  - GEOSITE,category-games@cn,DIRECT
-  - GEOSITE,geolocation-!cn,PROXY
-  - GEOSITE,cn,DIRECT
-
-  #GEOIP 规则
-  - GEOIP,private,DIRECT,no-resolve
-  - GEOIP,telegram,PROXY
-  - GEOIP,JP,PROXY
-  - GEOIP,CN,DIRECT
-  - DST-PORT,80/8080/443/8443,PROXY
   - MATCH,DIRECT
 ```
 
-## 辅助工具
+使用前确认文件存在且内核支持 MRS。需要 HTTP 自动更新时，将 provider 改为 `type: http`，配置实际可访问的数据 URL 和 `interval`；私有仓库的原始文件地址需要认证，不能直接当作匿名分发地址。完整 `geosite` 数据和精简数据的分类、覆盖范围不同，不能假设二者可无损互换。规则决定匹配和路由，不能保证服务解锁或替代实际网络验证。
 
-https://github.com/MetaCubeX/geo
+## 数据与构建流程
 
-🗺 An easy way to manage all your Geo resources.
+[resouces](resouces) 保存本项目的增补与删除列表；目录拼写为源码中的实际名称。工作流拉取社区域名源，合并和去重，调用上游构建器生成 geosite，再转换 geoip/geosite 数据、生成规则文件与校验和，最后发布 Release 和数据分支。
+
+主工作流每日 `22:30 UTC` 计划运行，也支持手动触发；计划是否实际执行取决于仓库 Actions 配置、权限和依赖服务。完整流程会访问多个外部数据源，使用 Go、Python、Bash、GNU 文本工具、`geo`、7-Zip 和 GitHub CLI，并需要发布权限。
+
+本仓库不是 Go 或 Node 应用，没有统一的 `make build` 或测试入口。重建时应按工作流准备多个上游 checkout 和中间文件，不能直接在根目录运行 `go build`。
+
+## 本地辅助脚本
+
+[scripts/convert-clash.sh](scripts/convert-clash.sh) 从当前目录的 `geoip.dat`、`geosite.dat` 生成 Clash 列表和 YAML，需要当前目录存在可执行的 `./mosdns`：
+
+```sh
+bash scripts/convert-clash.sh
+```
+
+[scripts/convert.sh](scripts/convert.sh) 还使用当前目录的 `./sing-box` 编译 sing-box 规则。这些脚本假设输入和工具已经备齐，使用 GNU `sed`，并会写入或替换当前目录中的 `geoip/`、`geosite/` 内容；应在专用工作目录中运行。主发布流程以工作流中的转换器为准。
+
+## 许可证与来源
+
+仓库包含 [GPL-3.0 LICENSE](LICENSE)。汇集的数据和工具仍需遵循各自来源的许可证与署名要求，不能将仓库许可视为所有外部数据库的统一授权。
+
+主要构建来源还包括 [MetaCubeX/meta-rules-converter](https://github.com/MetaCubeX/meta-rules-converter)、[MetaCubeX/geo](https://github.com/MetaCubeX/geo) 和 [xishang0128/geoip](https://github.com/xishang0128/geoip)。
+
 
 ## 致谢
+
 
 - [@Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip)
 - [@v2fly/domain-list-community](https://github.com/v2fly/domain-list-community)
@@ -138,4 +88,3 @@ https://github.com/MetaCubeX/geo
 - [@DanPollock/hosts](https://someonewhocares.org/hosts)
 - [@crazy-max/WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker)
 - [@blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)
-
