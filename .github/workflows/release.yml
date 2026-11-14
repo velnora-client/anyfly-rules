@@ -319,6 +319,18 @@ jobs:
           sha256sum BundleMRS.7z > BundleMRS.7z.sha256sum
           sha256sum GeoLite2-ASN.mmdb > GeoLite2-ASN.mmdb.sha256sum
 
+      - name: Package Android rule subset
+        run: |
+          cp resouces/BundleMRS-android.manifest publish/BundleMRS-android.manifest
+          while IFS= read -r path; do
+            test -s "meta-rule/$path"
+          done < resouces/BundleMRS-android.manifest
+          cd meta-rule
+          7z a ../publish/BundleMRS-android.7z -mx=1 -scsUTF-8 @../resouces/BundleMRS-android.manifest
+          7z t ../publish/BundleMRS-android.7z
+          cd ../publish
+          sha256sum BundleMRS-android.7z > BundleMRS-android.7z.sha256sum
+
       - name: Delete release if exist then create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
